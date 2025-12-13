@@ -233,17 +233,6 @@
             letter-spacing: -0.01em;
         }
         
-        .fade-in {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
         /* ==================== TRABAJO REALIZADO ==================== */
         .projects-grid {
             display: grid;
@@ -376,7 +365,7 @@
         
         /* ==================== PROYECTO AFÍN (CANDELARIA) ==================== */
         .afin-section {
-            background: linear-gradient(135deg, rgba(6, 162, 78, 0.05), rgba(165, 255, 156, 0.05));
+            background: linear-gradient(135deg, #6B2D8F 0%, #9B4D96 50%, #C75B9B 100%);
             padding: 5rem 2rem;
             margin: 3rem 0;
         }
@@ -386,12 +375,16 @@
             margin: 0 auto;
         }
         
+        .afin-container .section-title {
+            color: var(--color-white);
+        }
+        
         .afin-card {
-            background: var(--color-white);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: var(--shadow-medium);
-            border: 1px solid var(--color-gray-light);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
         .afin-banner {
@@ -409,7 +402,7 @@
         .afin-content h3 {
             font-family: var(--font-display);
             font-size: 2.2rem;
-            color: var(--color-primary);
+            color: #6B2D8F;
             margin-bottom: 1.5rem;
             font-weight: 700;
         }
@@ -454,66 +447,6 @@
             font-size: 1.1rem;
             color: var(--color-gray-medium);
             line-height: 1.8;
-        }
-        
-        /* ==================== IMPACTO (KPIs) ==================== */
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .kpi-card {
-            background: var(--color-white);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: var(--shadow-soft);
-            border: 1px solid var(--color-gray-light);
-            transition: var(--transition-smooth);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .kpi-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, transparent, rgba(6, 162, 78, 0.03));
-            opacity: 0;
-            transition: var(--transition-smooth);
-        }
-        
-        .kpi-card:hover::before {
-            opacity: 1;
-        }
-        
-        .kpi-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .kpi-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .kpi-value {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            color: var(--color-primary);
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-        
-        .kpi-label {
-            font-size: 1rem;
-            color: var(--color-gray-medium);
-            font-weight: 500;
         }
         
         /* ==================== EQUIPO ==================== */
@@ -595,22 +528,6 @@
             display: block;
         }
         
-        .allies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .ally-placeholder {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px dashed rgba(255, 255, 255, 0.3);
-            color: rgba(255, 255, 255, 0.7);
-            font-weight: 500;
-        }
-        
         /* ==================== FOOTER ==================== */
         .footer {
             background: rgba(0, 0, 0, 0.03);
@@ -678,7 +595,6 @@
                 grid-template-columns: 1fr;
             }
             
-            .kpi-grid,
             .team-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
@@ -727,7 +643,6 @@
                 <li><a href="#trabajo-realizado">Trabajo realizado</a></li>
                 <li><a href="#proyecto-afin">Proyecto Afín</a></li>
                 <li><a href="#trabajo-futuro">Trabajo futuro</a></li>
-                <li><a href="#impacto">Impacto</a></li>
                 <li><a href="#equipo">Equipo</a></li>
                 <li><a href="#aliados">Aliados</a></li>
             </ul>
@@ -748,10 +663,10 @@
     
     <!-- ==================== TRABAJO REALIZADO ==================== -->
     <section id="trabajo-realizado" class="section">
-        <h2 class="section-title fade-in">Trabajo Realizado</h2>
+        <h2 class="section-title">Trabajo Realizado</h2>
         <div class="projects-grid">
             <!-- PROYECTO 1: MICROFORMER -->
-            <div class="project-card fade-in">
+            <div class="project-card">
                 <h3>Microformer</h3>
                 <p class="project-description">
                     <!-- EDITABLE: Descripción de Microformer -->
@@ -787,7 +702,7 @@
             </div>
             
             <!-- PROYECTO 2: KIOSOL -->
-            <div class="project-card fade-in">
+            <div class="project-card">
                 <h3>Kiosol</h3>
                 <p class="project-description">
                     <!-- EDITABLE: Descripción de Kiosol -->
@@ -813,8 +728,8 @@
     <!-- ==================== PROYECTO AFÍN (CANDELARIA) ==================== -->
     <section id="proyecto-afin" class="afin-section">
         <div class="afin-container">
-            <h2 class="section-title fade-in">Proyecto Afín</h2>
-            <div class="afin-card fade-in">
+            <h2 class="section-title">Proyecto Afín</h2>
+            <div class="afin-card">
                 <!-- Banner de Candelaria -->
                 <img src="IMG/CANDELARIA.png" alt="Proyecto Candelaria - Carro Solar" class="afin-banner">
                 <div class="afin-content">
@@ -824,7 +739,7 @@
                         Candelaria es una iniciativa afín a IEEE PES donde se construye un carro solar para competir en la prestigiosa Bridgestone World Solar Challenge. Este proyecto representa el compromiso de nuestra comunidad con la innovación en movilidad sostenible y sistemas de energía renovable.
                     </p>
                     <!-- EDITABLE: Enlace de Candelaria -->
-                    <a href="#" class="project-link">Más información →</a>
+                    <a href="https://candelariahub.com/" target="_blank" rel="noopener" class="project-link" style="background: linear-gradient(135deg, #6B2D8F, #9B4D96);">Más información →</a>
                 </div>
             </div>
         </div>
@@ -832,8 +747,8 @@
     
     <!-- ==================== TRABAJO FUTURO ==================== -->
     <section id="trabajo-futuro" class="section future-section">
-        <h2 class="section-title fade-in">Trabajo Futuro</h2>
-        <div class="future-card fade-in">
+        <h2 class="section-title">Trabajo Futuro</h2>
+        <div class="future-card">
             <div class="future-icon">🔮</div>
             <h3>En Planificación</h3>
             <p>
@@ -843,88 +758,27 @@
         </div>
     </section>
     
-    <!-- ==================== IMPACTO (KPIs) ==================== -->
-    <section id="impacto" class="section">
-        <h2 class="section-title fade-in">Impacto</h2>
-        <div class="kpi-grid">
-            <!-- EDITABLE: KPIs - Actualizar valores -->
-            <div class="kpi-card fade-in">
-                <div class="kpi-icon">🔧</div>
-                <div class="kpi-value">Por actualizar</div>
-                <div class="kpi-label">Prototipos desarrollados</div>
-            </div>
-            
-            <div class="kpi-card fade-in">
-                <div class="kpi-icon">📊</div>
-                <div class="kpi-value">Por actualizar</div>
-                <div class="kpi-label">Variables monitoreadas</div>
-            </div>
-            
-            <div class="kpi-card fade-in">
-                <div class="kpi-icon">⏱️</div>
-                <div class="kpi-value">Por actualizar</div>
-                <div class="kpi-label">Horas de datos registradas</div>
-            </div>
-            
-            <div class="kpi-card fade-in">
-                <div class="kpi-icon">🎓</div>
-                <div class="kpi-value">Por actualizar</div>
-                <div class="kpi-label">Eventos/talleres realizados</div>
-            </div>
-            
-            <div class="kpi-card fade-in">
-                <div class="kpi-icon">🤝</div>
-                <div class="kpi-value">Por actualizar</div>
-                <div class="kpi-label">Alianzas activas</div>
-            </div>
-            
-            <div class="kpi-card fade-in">
-                <div class="kpi-icon">👥</div>
-                <div class="kpi-value">Por actualizar</div>
-                <div class="kpi-label">Estudiantes involucrados</div>
-            </div>
-        </div>
-    </section>
-    
     <!-- ==================== EQUIPO ==================== -->
     <section id="equipo" class="section">
-        <h2 class="section-title fade-in">Equipo</h2>
+        <h2 class="section-title">Equipo</h2>
         <div class="team-grid">
-            <!-- EDITABLE: Miembros del equipo - Actualizar nombres y roles -->
-            <div class="team-card fade-in">
-                <div class="team-avatar">JD</div>
-                <div class="team-name">Juan Pérez</div>
+            <!-- EDITABLE: Miembros del equipo -->
+            <div class="team-card">
+                <div class="team-avatar">ID</div>
+                <div class="team-name">Isabela Delatorre</div>
                 <div class="team-role">Presidente</div>
             </div>
             
-            <div class="team-card fade-in">
-                <div class="team-avatar">ML</div>
-                <div class="team-name">María López</div>
+            <div class="team-card">
+                <div class="team-avatar">LA</div>
+                <div class="team-name">Luis Aristizabal</div>
                 <div class="team-role">Vicepresidente</div>
             </div>
             
-            <div class="team-card fade-in">
-                <div class="team-avatar">CR</div>
-                <div class="team-name">Carlos Rodríguez</div>
-                <div class="team-role">Director de Proyectos</div>
-            </div>
-            
-            <div class="team-card fade-in">
-                <div class="team-avatar">AS</div>
-                <div class="team-name">Ana Silva</div>
-                <div class="team-role">Directora de Comunicaciones</div>
-            </div>
-            
-            <div class="team-card fade-in">
-                <div class="team-avatar">DM</div>
-                <div class="team-name">Diego Martínez</div>
-                <div class="team-role">Coordinador Técnico</div>
-            </div>
-            
-            <div class="team-card fade-in">
-                <div class="team-avatar">LG</div>
-                <div class="team-name">Laura Gómez</div>
-                <div class="team-role">Coordinadora de Eventos</div>
+            <div class="team-card">
+                <div class="team-avatar">AV</div>
+                <div class="team-name">Andrés Villamizar</div>
+                <div class="team-role">Tesorero</div>
             </div>
         </div>
     </section>
@@ -932,21 +786,12 @@
     <!-- ==================== ALIADOS / PERTENENCIA IEEE ==================== -->
     <section id="aliados" class="ieee-section">
         <div class="ieee-content">
-            <div class="ieee-badge fade-in">
+            <div class="ieee-badge">
                 A Student Chapter of the IEEE Power & Energy Society
             </div>
             
             <!-- Logo IEEE PES: usa PES.png porque el fondo es oscuro/verde -->
-            <img src="IMG/PES.png" alt="IEEE PES Logo" class="ieee-logo fade-in">
-            
-            <h2 class="section-title fade-in" style="color: var(--color-white); margin-top: 3rem;">Nuestros Aliados</h2>
-            <div class="allies-grid">
-                <!-- EDITABLE: Placeholders para aliados - Reemplazar con logos reales -->
-                <div class="ally-placeholder fade-in">Aliado 1</div>
-                <div class="ally-placeholder fade-in">Aliado 2</div>
-                <div class="ally-placeholder fade-in">Aliado 3</div>
-                <div class="ally-placeholder fade-in">Aliado 4</div>
-            </div>
+            <img src="IMG/PES.png" alt="IEEE PES Logo" class="ieee-logo">
         </div>
     </section>
     
@@ -964,12 +809,11 @@
             </div>
             
             <div class="footer-section">
-                <h4>Enlaces</h4>
-                <!-- EDITABLE: Enlaces del footer -->
-                <a href="#">Sobre nosotros</a>
-                <a href="#">Proyectos</a>
-                <a href="#">Eventos</a>
-                <a href="#">Contacto</a>
+                <h4>Contacto</h4>
+                <!-- EDITABLE: Contacto y redes sociales -->
+                <a href="mailto:ieeepes@uniandes.edu.co">📧 ieeepes@uniandes.edu.co</a>
+                <a href="https://www.linkedin.com/company/ieee-pes-uniandes/" target="_blank" rel="noopener">💼 LinkedIn</a>
+                <a href="https://www.instagram.com/ieeepes.uniandes/" target="_blank" rel="noopener">📸 Instagram</a>
             </div>
             
             <div class="footer-section">
@@ -996,29 +840,5 @@
             <p>&copy; 2024 IEEE PES Uniandes. Todos los derechos reservados.</p>
         </div>
     </footer>
-    
-    <!-- ==================== JAVASCRIPT (Opcional) ==================== -->
-    <script>
-        // Animación de fade-in al hacer scroll usando IntersectionObserver
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-            
-            // Observar todos los elementos con clase fade-in
-            document.querySelectorAll('.fade-in').forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
 </body>
 </html>
