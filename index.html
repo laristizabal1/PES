@@ -376,7 +376,7 @@
         
         /* ==================== PROYECTO AFÍN (CANDELARIA) ==================== */
         .afin-section {
-            background: linear-gradient(135deg, rgba(6, 162, 78, 0.05), rgba(165, 255, 156, 0.05));
+            background: linear-gradient(135deg, #6B2D8F 0%, #9B4D96 50%, #C75B9B 100%);
             padding: 5rem 2rem;
             margin: 3rem 0;
         }
@@ -386,12 +386,16 @@
             margin: 0 auto;
         }
         
+        .afin-container .section-title {
+            color: var(--color-white);
+        }
+        
         .afin-card {
-            background: var(--color-white);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: var(--shadow-medium);
-            border: 1px solid var(--color-gray-light);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
         .afin-banner {
@@ -409,7 +413,7 @@
         .afin-content h3 {
             font-family: var(--font-display);
             font-size: 2.2rem;
-            color: var(--color-primary);
+            color: #6B2D8F;
             margin-bottom: 1.5rem;
             font-weight: 700;
         }
@@ -746,7 +750,7 @@
                         Candelaria es una iniciativa afín a IEEE PES donde se construye un carro solar para competir en la prestigiosa Bridgestone World Solar Challenge. Este proyecto representa el compromiso de nuestra comunidad con la innovación en movilidad sostenible y sistemas de energía renovable.
                     </p>
                     <!-- EDITABLE: Enlace de Candelaria -->
-                    <a href="#" class="project-link">Más información →</a>
+                    <a href="https://candelariahub.com/" target="_blank" rel="noopener" class="project-link" style="background: linear-gradient(135deg, #6B2D8F, #9B4D96);">Más información →</a>
                 </div>
             </div>
         </div>
@@ -821,7 +825,7 @@
             <div class="footer-section">
                 <h4>Contacto</h4>
                 <!-- EDITABLE: Contacto y redes sociales -->
-                <a href="mailto:ieeepes@uniandes.edu.co">📧 ieeepes@uniandes.edu.co</a>
+                <a href="/cdn-cgi/l/email-protection#ed848888889d889ead9883848c8389889ec3888998c38e82">📧 <span class="__cf_email__" data-cfemail="056c60606075607645706b6c646b6160762b6061702b666a">[email&#160;protected]</span></a>
                 <a href="https://www.linkedin.com/company/ieee-pes-uniandes/" target="_blank" rel="noopener">💼 LinkedIn</a>
                 <a href="https://www.instagram.com/ieeepes.uniandes/" target="_blank" rel="noopener">📸 Instagram</a>
             </div>
@@ -852,7 +856,7 @@
     </footer>
     
     <!-- ==================== JAVASCRIPT (Opcional) ==================== -->
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Animación de fade-in al hacer scroll usando IntersectionObserver
         document.addEventListener('DOMContentLoaded', function() {
             const observerOptions = {
@@ -866,13 +870,4 @@
                         entry.target.classList.add('visible');
                     }
                 });
-            }, observerOptions);
-            
-            // Observar todos los elementos con clase fade-in
-            document.querySelectorAll('.fade-in').forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
-</body>
-</html>
+            }, observerOptio
