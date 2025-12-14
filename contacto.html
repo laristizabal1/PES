@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - IEEE PES Uniandes</title>
+    <meta name="description" content="Contáctanos - IEEE PES Uniandes. Formulario de contacto y medios de comunicación.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html">
+                <img src="IMG/PESNEGRO.jpg" alt="IEEE PES Uniandes" class="navbar-logo">
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#trabajo-realizado">Trabajo realizado</a></li>
+                <li><a href="index.html#proyecto-afin">Proyecto Afín</a></li>
+                <li><a href="index.html#equipo">Equipo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="contact-hero">
+        <h1>Contáctanos</h1>
+        <p>¿Interesado en nuestros proyectos? ¡Nos encantaría saber de ti!</p>
+    </section>
+
+    <!-- ==================== FORMULARIO ==================== -->
+    <div class="contact-container">
+        <div class="contact-form-card">
+            <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; text-align: center;">Envíanos un mensaje</h2>
+            <p style="text-align: center; color: var(--color-gray-medium); margin-bottom: 2rem;">
+                Completa el formulario y nos pondremos en contacto contigo lo antes posible.
+            </p>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">
+                        Nombre completo <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="Juan Pérez"
+                        required
+                    >
+                    <div class="form-error">Por favor ingresa tu nombre completo</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Correo electrónico <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="tu.correo@ejemplo.com"
+                        required
+                    >
+                    <div class="form-error">Por favor ingresa un correo electrónico válido</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">
+                        Número de teléfono <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="+57 300 123 4567"
+                        required
+                    >
+                    <div class="form-error">Por favor ingresa un número de teléfono válido</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">
+                        Mensaje <span class="required">*</span>
+                    </label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder="Cuéntanos en qué estás interesado..."
+                        required
+                    ></textarea>
+                    <div class="form-error">Por favor ingresa un mensaje (mínimo 10 caracteres)</div>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Enviar mensaje
+                </button>
+
+                <div id="form-status" class="form-status"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== INFORMACIÓN DE CONTACTO ==================== -->
+    <section class="contact-info">
+        <h2 class="section-title">Otras formas de contacto</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="icon">📧</div>
+                <h3>Correo Electrónico</h3>
+                <a href="mailto:ieeepes@uniandes.edu.co">ieeepes@uniandes.edu.co</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">💼</div>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/company/ieee-pes-uniandes/" target="_blank" rel="noopener">
+                    IEEE PES Uniandes
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📸</div>
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/ieeepes.uniandes/" target="_blank" rel="noopener">
+                    @ieeepes.uniandes
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📍</div>
+                <h3>Ubicación</h3>
+                <p style="margin: 0;">
+                    Universidad de los Andes<br>
+                    Bogotá, Colombia<br>
+                    Carrera 1 # 18A-12
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>IEEE PES Uniandes</h4>
+                <p>
+                    Capítulo estudiantil de IEEE Power & Energy Society en la Universidad de los Andes, Colombia. Promoviendo la innovación en sistemas de potencia y transición energética.
+                </p>
+                <img src="IMG/PESNEGRO.jpg" alt="IEEE PES" class="footer-logo">
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <a href="mailto:ieeepes@uniandes.edu.co">📧 ieeepes@uniandes.edu.co</a>
+                <a href="https://www.linkedin.com/company/ieee-pes-uniandes/" target="_blank" rel="noopener">💼 LinkedIn</a>
+                <a href="https://www.instagram.com/ieeepes.uniandes/" target="_blank" rel="noopener">📸 Instagram</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="index.html#trabajo-realizado">Proyectos</a>
+                <a href="index.html#equipo">Equipo</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <a href="https://www.ieee.org" target="_blank" rel="noopener">IEEE.org</a>
+                <a href="https://pes.ieee.org" target="_blank" rel="noopener">IEEE PES</a>
+                <a href="https://uniandes.edu.co" target="_blank" rel="noopener">Universidad de los Andes</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 IEEE PES Uniandes. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/contact-form.js"></script>
+</body>
+</html>
